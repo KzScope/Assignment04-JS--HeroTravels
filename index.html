@@ -4,143 +4,256 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flight Booking</title>
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap"
-        rel="stylesheet">
-    <!-- Stylesheet -->
-    <!-- Latest compiled and minified CSS -->
+    <title>Hero Travels</title>
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet" />
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet" />
 </head>
 
 <body>
-    <!--Header and Menu Section-->
-    <header class="container">
-        <nav>
-            <ul>
-                <li><a class="active" href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Sign Up</a></li>
-            </ul>
+    <div class="container color-front mb-3">
+        <nav class="navbar navbar-expand-lg navbar-light fs-5 fw-bold">
+            <div class="container-fluid branding">
+                <button class="navbar-toggler text-light" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon text-light"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                    <a class="navbar-brand text-light" href="#">Hero Travels</a>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item text-light">
+                            <a class="nav-link text-light" href="#">Tickets</a>
+                        </li>
+                        <li class="nav-item text-light">
+                            <a class="nav-link text-light" href="#" tabindex="-1" aria-disabled="true">Destinations</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn color-front text-light fs-5 fw-bold" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
         </nav>
-    </header>
-
-    <!--Booking Section-->
-    <section class="container-fluid" id="booking">
-        <div class="container row main-content">
+    </div>
+<section class="container" id="Booking">
+    <div class="container mt-4">
+        <div class="row row justify-content-center branding align-items-center">
             <div class="col-md-6">
                 <div class="booking-form">
-                    <h3 class="text-center text-primary">Booking Flights</h3>
-                    <div class="input-group">
-                        <label for="">Flying From</label>
-                        <input class="inp-style" type="text" name="" placeholder="Dhake, Bangladesh">
-                    </div>
-                    <div class="input-group">
-                        <label for="">Flying To</label>
-                        <input class="inp-style" type="text" name="" placeholder="New York, United States">
-                    </div>
-                    <div class="inputs">
-                        <div class="input-group">
-                            <label" for="">Departure</label>
-                                <input class="inp-style" type="date" name="">
-                        </div>
-                        <div class="input-group">
-                            <label for="">Return</label>
-                            <input class="inp-style" type="date" name="">
+                    <h3 class="text-center mb-5 fs-1 fw-bold">Book Flights</h3>
+                    <div class="input-group d-flex justify-content-between">
+                        <div class="input-item"> <label for="">Flying From</label> </div>
+                        <div> <input class="inp-style text-center" type="text" name="" placeholder="Dhake, Bangladesh">
                         </div>
                     </div>
+                    <div class="input-group d-flex justify-content-between">
+                        <div class="input-item"> <label for="">Flying To</label> </div>
+                        <div> <input class="inp-style text-center" type="text" name=""
+                                placeholder="London, United Kingdom"> </div>
+                    </div>
+                    <div class="input d-flex justify-content-between">
+                        <div class="input-group">
+                            <label" for="">Departure Date</label>
+                        </div>
+                        <div class="input-group">
+                            <input class="inp-style text-center" type="date" name="">
+                        </div>
+                    </div>
+                    <div class="input d-flex justify-content-between">
+                        <div class="input-group">
+                            <label" for="">Return Date</label>
+                        </div>
+                        <div class="input-group">
+                            <input class="inp-style text-center" type="date" name="">
+                        </div>
+                    </div>
+                    <hr>
                     <div class="input-group f-class">
                         <div>
                             <label for="">First Class ($150)</label>
-                            <input id="f-ticket-input" class="inp-style inp-width ticket-quantity" type="text" name="quantity" value="0">
                         </div>
-                        <div class="plus-minus-btn">
-                            <button class="btn btn-default"><i id="f-plusBtn" class="fas fa-plus icon-btn"></i></button>
-                            <button class="btn btn-default"><i id="f-minusBtn" class="fas fa-minus icon-btn"></i></button>
+                        <div class="plus-minus-btn d-flex">
+                            <div>
+                                <input id="f-ticket-input" class="inp-style inp-width ticket-quantity text-center"
+                                    type="text" name="quantity" value="0">
+                            </div>
+                            <Div>
+                                <button class="btn btn-default"><i id="f-plusBtn"
+                                        class="fas fa-plus icon-btn p-2 text-light"></i></button>
+                                <button class="btn btn-default"><i id="f-minusBtn"
+                                        class="fas fa-minus icon-btn p-2 text-light"></i></button>
+                            </Div>
                         </div>
                     </div>
-
                     <div class="input-group f-class">
                         <div>
                             <label for="">Economy ($100)</label>
-                            <input id="e-ticket-input" class="inp-style inp-width ticket-quantity" type="text" name="quantity" value="0">
                         </div>
-                        <div class="plus-minus-btn">
-                            <button class="btn btn-default"><i id="e-plusBtn" class="fas fa-plus icon-btn"></i></button>
-                            <button class="btn btn-default"><i id="e-minusBtn" class="fas fa-minus icon-btn"></i></button>
+                        <div class="plus-minus-btn d-flex">
+                            <div>
+                                <input id="e-ticket-input" class="inp-style inp-width ticket-quantity text-center"
+                                    type="text" name="quantity" value="0">
+                            </div>
+                            <div>
+                                <button class="btn btn-default"><i id="e-plusBtn"
+                                        class="fas fa-plus icon-btn p-2 text-light"></i></button>
+                                <button class="btn btn-default"><i id="e-minusBtn"
+                                        class="fas fa-minus icon-btn p-2 text-light"></i></button>
+                            </div>
                         </div>
                     </div>
+                    <hr>
                     <div class="calculations">
-                        <div class="amount">
+                        <div class="amount d-flex justify-content-between">
                             <div class="left">
-                                <p>Subtotal</p>
+                                <p class="text-light fs-4 fw-bold">Subtotal</p>
                             </div>
                             <div class="right">
-                                <p id="sub-amount">$0</p>
+                                <p class="fs-4 fw-bold" id="sub-amount">$0</p>
                             </div>
                         </div>
-
-                        <div class="amount">
+                        <div class="amoun d-flex justify-content-between">
                             <div class="left">
-                                <p>Charge 10% VAT</p>
+                                <p class="text-light fs-4 fw-bold">Charge 10% VAT</p>
                             </div>
                             <div class="right">
-                                <p id="vat-amount">$0</p>
+                                <p class="fs-4 fw-bold" id="vat-amount">$0</p>
                             </div>
                         </div>
                         <hr>
-                        <div class="amount">
+                        <div class="amount d-flex justify-content-between">
                             <div class="left">
-                                <h4>Total</h4>
+                                <h4 class="text-light fs-3 fw-bold">Total</h4>
                             </div>
                             <div class="right">
-                                <p id="total-amount">$0</p>
+                                <p class="fs-3 fw-bold" id="total-amount">$0</p>
                             </div>
                         </div>
                     </div>
-                    <button class="btn-style" id="confirmation">Book Now</button>
+                    <div class="text-center">
+                        <button class="btn book-btn fs-3 fw-bold p-3 mt-3" type="submit" id="confirmation">Book
+                            Now</button>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-6 content-box">
-                <div class="booking-content">
-                    <h1>discover <br> around the world</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga
-                        laborumalias veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis
-                        eaque deserunt nobise voluptatibus quam</p>
+            <div class="col-md-6 booking-content p-5">
+                <h3 class="fs-1 fw-bold">Discover around the world</h3>
+                <h1 class="fs-1 fw-bold">Hero Travels</h1>
+                <p class="mt-5 fs-3">Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam
+                    fuga
+                    laborumalias veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis
+                    eaque deserunt nobise voluptatibus quam</p>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-4">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="images/hero-img.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Tours</h5>
+                        <p class="card-text">Our Amazing tour catalogue has everything for everyone</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="images/service1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Ground Handling</h5>
+                        <p class="card-text">We have bunch of specialized ground operator to take care of you from start
+                            to finish your tour</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="images/service3.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Guide Service</h5>
+                        <p class="card-text">All tours we offer has guide service, That too included in the list price
+                            you pay for the tour. So NO GETTING LOST nomore </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="images/about-img.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Car Pull Service</h5>
+                        <p class="card-text">We have a huge network of Car rental around the world. no matter what time
+                            it is - if you call us? We will pick you up from almost any airport in just 30 Minutes</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <section class="hero-banner magic-ball">
-        <div class="container">
-            <div class="row align-items-center text-center text-md-left">
-                <div class="col-md-6 col-lg-5 mb-5 mb-md-0">
-                    <h1>Travel More To Discover Yourself</h1>
-                    <p>Air seed winged lights saw kind whales in sixth dont seas dron image so fish all tree meat
-                        dont there is seed winged lights saw kind whales in sixth dont seas dron image so fish all
-                        tree meat dont there </p>
-                    <a class="button button-hero mt-4" href="#">Get Started</a>
-                </div>
-                <div class="col-md-6 col-lg-7 col-xl-6 offset-xl-1">
-                    <img class="img-fluid" src="img/home/hero-img.png" alt="">
-                </div>
+    </div>
+    <div class="container text-center mt-4 p-5 color-front">
+        <h2 class="p-3"> Still have question? Request a call back
+        </h2>
+        <div class="input justify-content-between">
+            <input type="text" placeholder="Your Name">
+            <input type="text" placeholder="Your Phone Number">
+            <input type="text" placeholder="Your Question">
+        </div>
+        <button class="booking-btn mt-3 p-3">Call Me back</button>
+    </div>
+    <div class="container-fluid Contact">
+        <div class="row p-5">
+            <div class="col p-5">
+                <h3>Our Presence</h2>
+                    <ul>
+                        <li>Europe</li>
+                        <li>United States</li>
+                        <li>United Arab Emirates</li>
+                        <li>India</li>
+                        <li>Malaysia</li>
+                    </ul>
+            </div>
+            <div class="col p-5">
+                <h3>Top Destinations</h2>
+                    <ul>
+                        <li>France</li>
+                        <li>Las Vegas</li>
+                        <li>Dubai</li>
+                        <li>Delhi</li>
+                        <li>Langkawi</li>
+                    </ul>
+            </div>
+            <div class="col p-5">
+                <h3>Other Services</h2>
+                    <ul>
+                        <li>Visa processing</li>
+                        <li>Hotel Booking</li>
+                        <li>Cruise Rental</li>
+                        <li>Car Rental</li>
+                        <li>Corporate Tours</li>
+                    </ul>
             </div>
         </div>
-    </section>
-
-    <div class="container" id="confirmation-page">
-        <div class="greetings">
-            <h2>Thank You for choosing us</h2>
+    </div>
+</section>
+    <div class="container greetings color-front" id="confirmation-page">
+        <div class="">
+            <h2 class="fs-1 fw-bold p-3">Thank You for choosing us</h2>
             <p>You will receive a confiramtion email of your booking soon as we verify your payment</p>
             <h4>Have an wonderful Journey</h4>
         </div>
     </div>
+    <footer class="container-fluid branding rights mt-5">
+        <div class="text-center"> <small>ALL RIGHTS RESERVED BY HERO TRAVELS LLC</small></div>
+    </footer>
+
+
     <!-- js scripts goes here  -->
     <script src="script.js"></script>
     <!--Thank You-->

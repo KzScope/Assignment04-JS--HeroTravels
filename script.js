@@ -73,6 +73,10 @@ function Billing() {
     document.getElementById('total-amount').innerText = '$' + grandTotal;
 }
 
+
+
+// Bonus effect
+
 const checkout = document.getElementById("confirmation");
 checkout.addEventListener('click', function () {
     const bookingArea = document.getElementById("Booking");
@@ -80,5 +84,3 @@ checkout.addEventListener('click', function () {
     const confirmArea = document.getElementById("confirmation-page");
     confirmArea.style.display = "Block";
 })
-
-// Bonus effect
